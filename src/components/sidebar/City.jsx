@@ -13,17 +13,18 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
-const City = () => {
+function City() {
   const { id } = useParams();
-  const { getCity, currentCity, isLoadng } = useCities();
+  const { getCity, currentCity, isLoading } = useCities();
 
-  useEffect(() => {
-    getCity(id);
-  }, [id, getCity]);
-
-  if (isLoadng) return <Spinner />;
+  useEffect(function () {
+    id && getCity(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const { cityName, emoji, date, notes } = currentCity;
+
+  if (isLoading) return <Spinner />;
 
   return (
     <div className={styles.city}>
@@ -62,6 +63,6 @@ const City = () => {
       </div>
     </div>
   );
-};
+}
 
 export default City;
