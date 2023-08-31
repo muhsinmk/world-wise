@@ -2,7 +2,7 @@
 
 ### Demo Screeshots
 
-![World Wise Desktop Demo](./public/landing_page.jpg "Landing Page")
+![World Wise Desktop Demo](public/landing_page.jpg "Landing Page")
 ![World Wise Desktop Demo](./public/main_page.jpg "Main Page")
 
 ## WorldWise is a travel tracking application that allows users to register the cities and countries they have traveled to. The application offers the following features:
